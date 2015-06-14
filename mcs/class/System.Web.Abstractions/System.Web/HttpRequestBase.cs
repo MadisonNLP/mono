@@ -55,6 +55,18 @@ namespace System.Web
 			throw new NotImplementedException ();
 		}
 
+        public virtual Stream GetBufferedInputStream() {
+            return this.InputStream;
+        }
+
+        public virtual Stream GetBufferlessInputStream() {
+            return this.InputStream;
+        }
+
+        public virtual Stream GetBufferlessInputStream(bool disableMaxRequestLength) {
+            return this.InputStream;
+        }
+
 		public virtual string [] AcceptTypes { get { NotImplemented (); return null; } }
 
 		public virtual string AnonymousID { get { NotImplemented (); return null; } }

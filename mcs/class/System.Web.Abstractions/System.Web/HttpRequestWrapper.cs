@@ -59,6 +59,18 @@ namespace System.Web
 			w = httpRequest;
 		}
 
+        public override Stream GetBufferedInputStream() {
+            return w.InputStream;
+        }
+
+        public override Stream GetBufferlessInputStream() {
+            return w.InputStream;
+        }
+
+        public override Stream GetBufferlessInputStream(bool disableMaxRequestLength) {
+            return w.InputStream;
+        }
+
 		public override string [] AcceptTypes {
 			get { return w.AcceptTypes; }
 		}
